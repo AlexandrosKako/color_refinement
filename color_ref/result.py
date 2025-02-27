@@ -5,6 +5,10 @@ class Result:
         self.iterations = iterations
         self.discrete = discrete
 
+
+    def add_graph(self, graph_index):
+        self.graphs.append(graph_index)
+
     def __repr__(self):
         return ('(graphs={}, classes={}, iterations={}, is_discrete={})'
                 .format(self.graphs, self.class_freq, self.iterations, self.discrete))
