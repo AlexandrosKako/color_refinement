@@ -25,7 +25,7 @@ class ColorRef:
         return G
 
     def step(self):
-        color_classes = {}
+        color_classes = []
         new_coloring = {}
         finished_coloring = {}
         for graph_coloring in self.coloring.values():

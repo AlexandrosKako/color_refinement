@@ -37,7 +37,7 @@ class Coloring:
         return self._previous_colors
 
     def color_class(self, vertex):
-        return tuple(sorted(Counter([self._previous_colors.get(n) for n in vertex.neighbours]).items()))
+        return hash(tuple(sorted(Counter([self._previous_colors.get(n) for n in vertex.neighbours]).items())))
 
     def is_finished(self):
         return len(set(self.colors.values())) == len(set(self.previous_colors.values()))
